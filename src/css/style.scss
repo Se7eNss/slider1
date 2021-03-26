@@ -1,0 +1,571 @@
+@import "settings";
+@import "style-mediaqueries";
+
+.time-bar {
+    width: 100%;
+    height: 0.4vw;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
+}
+.time-bar-ani {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0%;
+        width: 100%;
+        height: 0.4vw;
+        background-color: #dead5a;
+        -webkit-animation-name: time-bar-ani;
+        animation-name: time-bar-ani;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+    }
+}
+@keyframes time-bar-ani {
+    0% {
+        width: 0%;
+    }
+    75% {
+        left: 0;
+    }
+    to {
+        left: 100%;
+        width: 100%;
+    }
+}
+
+.overlay {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    .overlay-sm {
+        // margin-right: -5vw;
+        // margin-bottom: 7vw;
+        .item-wrapper {
+            // display: flex;
+            // justify-content: space-between;
+            // width: 55vw;
+            // background-color: lime;
+            // margin-right: -100px !important;
+        }
+    }
+    .item.cover {
+        // sıkıntı
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        .shadow {
+            ul {
+                visibility: hidden;
+            }
+        }
+    }
+    .item {
+        position: absolute;
+        width: 12vw;
+        height: 18vw;
+        top: calc(55% - 4vw);
+        border-radius: 1vw;
+        box-shadow: 10px 10px 30px black;
+        overflow: hidden;
+    }
+    .animate__fadeOutDown {
+        animation-duration: 555ms;
+    }
+    .animate__fadeInUp {
+        animation-duration: 333ms;
+    }
+    .shadow {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 1vw;
+        color: white;
+        ul {
+            margin-top: 12vw;
+            .string {
+                width: 1vw;
+                height: 0.16vw;
+                background-color: white;
+            }
+            h3 {
+                font-size: 0.9vw;
+            }
+            h1 {
+                font-size: 1.1vw;
+            }
+        }
+    }
+    .item-0 {
+        background: url("../../images/c1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .item-1 {
+        background: url("../../images/a1.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .item-2 {
+        background: url("../../images/b1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .item-3 {
+        background: url("../../images/c1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .item-4 {
+        background: url("../../images/d1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .item-5 {
+        background: url("../../images/e1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .center {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .navbar {
+        padding: 1vw;
+        a {
+            font-size: 1vw;
+            padding: 1vw;
+        }
+    }
+    .content.show {
+        display: block;
+    }
+    .content-wrapper {
+        position: absolute;
+        top: calc(55% - 8.3vw);
+    }
+    .content {
+        display: none;
+        color: white;
+        margin-top: -4px;
+        .string {
+            margin-left: 1.5px;
+            width: 2vw;
+            height: 0.25vw;
+            background-color: white;
+        }
+        .h1 {
+            font-size: 5vw;
+            margin-left: -2px;
+        }
+        .h3 {
+            font-size: 2vw;
+        }
+        .h5 {
+            font-size: 1vw;
+            line-height: 1.5vw;
+            margin-left: 0.5px;
+        }
+        h1 {
+            font-size: 5vw;
+            margin-left: -2px;
+        }
+        h3 {
+            font-size: 2vw;
+        }
+        h5 {
+            font-size: 1vw;
+            line-height: 1.5vw;
+            margin-left: 0.5px;
+        }
+        .bookmark {
+            background-color: #f0ad31;
+            width: 3vw;
+            height: 3vw;
+            border-radius: 3vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5px;
+            img {
+                width: 1.5vw;
+                height: 1.5vw;
+            }
+        }
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-radius: 2vw;
+            color: white;
+            overflow: hidden;
+            font-size: 1vw;
+            border: 1px solid white;
+            line-height: 2vw;
+            a {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 100%;
+                transition: 333ms ease all;
+            }
+            &:hover {
+                &:after {
+                    bottom: 0;
+                    background-color: #dead5a;
+                }
+            }
+        }
+    }
+    .header-bottom {
+        position: absolute;
+        bottom: 1rem;
+        right: 0.75rem;
+        .header-bottom-width {
+            width: 52.5vw;
+        }
+        .slide-buttons {
+            .play-stop {
+                li.show {
+                    display: flex;
+                }
+                li {
+                    align-items: center;
+                    justify-content: center;
+                    display: none;
+                    margin: 0;
+                }
+            }
+            .btn {
+                width: 4vw;
+                height: 4vw;
+                border: 1px solid white;
+                border-radius: 4vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 1vw;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+                img {
+                    width: 2vw;
+                    height: 2vw;
+                }
+            }
+        }
+        .progress {
+            height: 2px;
+            width: 32vw;
+            .progress-bar {
+                background-color: #dead5a;
+            }
+        }
+        .count {
+            color: white;
+            font-size: 2vw;
+        }
+    }
+}
+
+footer {
+    height: 400px;
+    margin-top: 200px;
+}
+// <!-- _____________________________ keyframes _____________________________________________________________ -->
+
+@keyframes ani-cover {
+    0% {
+        right: 40%;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+.ani-cover {
+    -webkit-animation-name: ani-cover;
+    animation-name: ani-cover;
+    z-index: 1;
+    animation-delay: 333ms;
+    animation-duration: 666ms;
+    animation-timing-function: ease-in;
+    // position: absolute;
+//     left: 0;
+//    top: 0; 
+}
+// @keyframes stage-0 {
+//     0% {
+//         width: 100% !important;
+//         height: 100% !important;
+//         background-color: rgba(0, 0, 0, 0.9);
+//     }
+//     to {
+//         width: 150% !important;
+//         height: 150% !important;
+//         background-color: rgba(0, 0, 0, 0.9);
+//     }
+// }
+.r-50 {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0;
+    z-index: 0;
+    border-radius: 0 !important;
+    // -webkit-animation-name: stage-0;
+    // animation-name: stage-0;
+    .shadow {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: 1s ease-out all;
+    }
+}
+
+@keyframes stage-1 {
+    0% {
+        
+        right: 26%;
+        // order: 3;
+    }
+    to {
+        right: 40%;
+        // order: 3;
+    }
+}
+.r-30 {
+    // position: relative;
+    -webkit-animation-name: stage-1;
+    animation-name: stage-1;
+    animation-delay: 333ms;
+    animation-duration: 999ms;
+    z-index: 2;
+    animation-timing-function: ease;
+}
+@keyframes stage-2 {
+    0% {
+        right: 12%;
+    }
+    to {
+        right: 26%;
+    }
+}
+.r-20 {
+    // right: 0;
+    // position: relative;
+    // order: 4;
+    -webkit-animation-name: stage-2;
+    animation-name: stage-2;
+    animation-delay: 533ms;
+    animation-duration: 999ms;
+    z-index: 3;
+    animation-timing-function: ease;
+}
+@keyframes stage-3 {
+    0% {
+        right: -2%;
+    }
+    to {
+        right: 12%;
+    }
+}
+.r-10 {
+    // order: none;
+    // right: 0;
+    // position: relative;
+    // right: 12%;
+    -webkit-animation-name: stage-3;
+    animation-name: stage-3;
+    animation-delay: 733ms;
+    animation-duration: 999ms;
+    z-index: 4;
+    animation-timing-function: ease;
+}
+@keyframes stage-4 {
+    0% {
+        right: -16%;
+    }
+    to {
+        right: -2%;
+    }
+}
+.r-0 {
+    // right: 0;
+    // position: relative;
+    // order: 6;
+    -webkit-animation-name: stage-4;
+    animation-name: stage-4;
+    animation-delay: 933ms;
+    animation-duration: 999ms;
+    z-index: 5;
+    animation-timing-function: ease;
+}
+
+// <!-- _____________________________ card ani small device _____________________________________________________________ -->
+
+@keyframes ani-cover-sm {
+    0% {
+        right: 25%;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+@keyframes stage-1-sm {
+    0% {
+        right: -10%;
+    }
+    to {
+        right: 25%;
+    }
+}
+@keyframes stage-2-sm {
+    0% {
+        right: -80%;
+    }
+    to {
+        right: -10%;
+    }
+}
+@keyframes stage-3-sm {
+    0% {
+        right: -60%;
+    }
+    to {
+        right: -50%;
+    }
+}
+@keyframes stage-4-sm {
+    0% {
+        right: -60%;
+    }
+    to {
+        right: -50%;
+    }
+}
+// <!-- _____________________________ progress bar _____________________________________________________________ -->
+@keyframes progress-1 {
+    0% {
+        width: 0;
+    }
+    to {
+        width: 17%;
+    }
+}
+.progress-1 {
+    -webkit-animation-name: progress-1;
+    animation-name: progress-1;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}
+@keyframes progress-2 {
+    0% {
+        width: 17%;
+    }
+    to {
+        width: 34%;
+    }
+}
+.progress-2 {
+    -webkit-animation-name: progress-2;
+    animation-name: progress-2;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}
+@keyframes proggress-3 {
+    0% {
+        width: 34%;
+    }
+    to {
+        width: 51%;
+    }
+}
+.progress-3 {
+    -webkit-animation-name: proggress-3;
+    animation-name: proggress-3;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}
+@keyframes proggress-4 {
+    0% {
+        width: 51%;
+    }
+    to {
+        width: 67%;
+    }
+}
+.progress-4 {
+    -webkit-animation-name: proggress-4;
+    animation-name: proggress-4;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}
+@keyframes proggress-5 {
+    0% {
+        width: 67%;
+    }
+    to {
+        width: 84%;
+    }
+}
+.progress-5 {
+    -webkit-animation-name: proggress-5;
+    animation-name: proggress-5;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}
+@keyframes proggress-6 {
+    0% {
+        width: 84%;
+    }
+    to {
+        width: 100%;
+    }
+}
+.progress-6 {
+    -webkit-animation-name: proggress-6;
+    animation-name: proggress-6;
+    animation-duration: 1s;
+    animation-delay: 333ms;
+}

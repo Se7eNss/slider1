@@ -1,0 +1,190 @@
+// Extra extra large devices (tv, 1440px and up)
+@media screen and (min-width: 1440px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (max-width: 1200px) {
+}
+// Large devices (desktops, 992px and up)
+@media screen and (max-width: 992px) {
+    .navbar {
+        // background-color: pink;
+        // opacity: 0.5;
+    }
+    header {
+        .center {
+            .header-bottom {
+                width: 100%;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                .header-bottom-width {
+                    width: 70vw;
+                    .progress {
+                        width: 40vw;
+                    }
+                }
+            }
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    .navbar {
+        // background-color: red;
+    }
+    body {
+        .overlay {
+            .item {
+                height: 22vw;
+                top: 60%;
+            }
+            .shadow {
+                ul {
+                    margin-top: 13vw;
+                    .string {
+                        width: 1.5vw;
+                        height: 0.26vw;
+                    }
+                    h3 {
+                        font-size: 1.2vw;
+                    }
+                    h1 {
+                        font-size: 1.4vw;
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        // background-color: red;
+        // opacity: .5;
+        .center {
+            .header-bottom {
+                .header-bottom-width {
+                    width: 90vw;
+                    .progress {
+                        width: 56vw;
+                    }
+                }
+            }
+            .content-wrapper {
+                position: relative;
+                // top: 15px;
+                margin-top: 50px;
+                .content {
+                    .string {
+                        width: 3vw;
+                        height: 0.3vw;
+                    }
+                    h1 {
+                        font-size: 7vw;
+                    }
+                    h3 {
+                        font-size: 3vw;
+                    }
+                    h5 {
+                        font-size: 2vw;
+                        line-height: 2.5vw;
+                    }
+                    .bookmark {
+                        width: 6vw;
+                        height: 6vw;
+                        border-radius: 4vw;
+                        img {
+                            width: 3vw;
+                            height: 3vw;
+                        }
+                    }
+                    .btn {
+                        font-size: 1.5vw;
+                        border-radius: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 576px) {
+    .navbar {
+        // background-color: lime;
+    }
+
+    body {
+        .overlay {
+            .item {
+                top: 45%;
+                width: 30vw;
+                height: 45vw;
+                border-radius: 2vw;
+            }
+            .shadow {
+                ul {
+                    margin-top: 30vw;
+                    .string {
+                        width: 3vw;
+                        height: 0.26vw;
+                    }
+                    h3 {
+                        font-size: 2vw;
+                    }
+                    h1 {
+                        font-size: 3vw;
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+        .center {
+            .header-bottom {
+                .header-bottom-width {
+                    .slide-buttons {
+                        .btn {
+                            width: 8vw;
+                            height: 5vw;
+                            border-radius: 1vw;
+                            img {
+                                width: 3vw;
+                                height: 4vw;
+                            }
+                        }
+                    }
+                    .progress {
+                        display: none;
+                    }
+                    .count {
+                        font-size: 5vw;
+                        &:after {
+                            content: "/06";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // <!-- _____________________________ keyframes _____________________________________________________________ -->
+    .ani-cover {
+        -webkit-animation-name: ani-cover-sm !important;
+        animation-name: ani-cover-sm !important;
+    }
+    .r-30 {
+        -webkit-animation-name: stage-1-sm !important;
+        animation-name: stage-1-sm !important;
+    }
+    .r-20 {
+        -webkit-animation-name: stage-2-sm !important;
+        animation-name: stage-2-sm !important;
+    }
+    .r-10 {
+        -webkit-animation-name: stage-3-sm !important;
+        animation-name: stage-3-sm !important;
+    }
+    .r-0 {
+        -webkit-animation-name: stage-4-sm !important;
+        animation-name: stage-4-sm !important;
+    }
+}

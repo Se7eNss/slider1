@@ -1,0 +1,26 @@
+// @font-face{
+//   font-family: 'poppins_bold';
+//   src: url('../../fonts/poppins/Poppins-Bold_0.ttf');
+// }
+
+$font-type: proxima-nova;
+
+@mixin selection {
+  & ::-moz-selection {
+    @content;
+  }
+  & ::selection {
+    @content;
+  }
+}
+
+body {
+  // font-family: $font-type, sans-serif;
+  font-family: sans-serif;
+  // font-style: normal;
+  // font-weight: 100;
+  // color: $grey5;
+  @include selection {
+    background-color: rgba(30, 144, 255, 0.2);
+  }
+}
